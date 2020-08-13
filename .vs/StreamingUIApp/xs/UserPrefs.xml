@@ -1,0 +1,34 @@
+﻿<Properties StartupConfiguration="{165F01CB-DFEF-4430-89DB-4BD08663CD82}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="StreamingUIApp/Views/MoviePage.xaml">
+    <Files>
+      <File FileName="StreamingUIApp/Views/MoviePage.xaml" Line="31" Column="7" />
+      <File FileName="StreamingUIApp/ViewModels/MovieViewModel.cs" Line="10" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="StreamingUIApp" expanded="True" selected="True">
+            <Node name="StreamingUIApp" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="ViewModels" expanded="True" />
+              <Node name="Views" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="StreamingUIApp.Android" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.StreamingUIApp.Android PreferredExecutionTarget="Android.1115fba155480902" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.StreamingUIApp.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.19246DB7-ED17-4769-94AD-22BF5FA8FA24" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

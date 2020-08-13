@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:PanCake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="StreamingUIApp.Views.MoviePage">
+    
+   <ScrollView BackgroundColor="#212121" VerticalScrollBarVisibility="Never" HorizontalScrollBarVisibility="Never">
+    <Grid ColumnDefinitions="Auto,*" RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto" Margin="0,-21,0,0">
+        <!-- Main banner-->
+
+          <!--Banner-->
+         <Image Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Source="MainBanner" Aspect="AspectFill" HeightRequest="280"/>
+          <!--Actor name-->
+         <Label Grid.Row="0" Grid.Column="0" VerticalOptions="End" TextColor="White" Padding="20,0,0,5" FontSize="28" Text="Dennis Hoper"/>
+          <!--Actor description-->
+         <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Text="Actor, Director, Writer"  FontSize="20" FontAttributes="Bold" TextColor="#adadad" Padding="20,0,20,20"/>
+          <!--More option-->
+         <StackLayout  Grid.Row="1" Grid.Column="1" Padding="0,0,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="End">
+              <Label TextColor="#eba507" Text="MORE"/>
+              <Image Source="Arrow"  /> 
+         </StackLayout>
+         <!--Actor description-->
+         <!--Picture option-->
+         <Image Grid.Row="2" Grid.Column="0" Grid.RowSpan="2"  Source="Actor" Margin="0,0,0,0" WidthRequest="150" HeightRequest="160"/>
+         <!--Description-->
+         <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="StartAndExpand" Padding="0,0,20,0" TextColor="#adadad" Text="With an amacing cinematic career of more than five decades, Dennis Hopper was a multi-talent and unconventional actor/director, regarded by many as one of the..."/>
+         <!--Born information-->
+         <Button Grid.Row="3" Grid.Column="1" BackgroundColor="#263032" Margin="0,15,20,0" TextColor="White" FontAttributes="Bold" CornerRadius="10" Text="Born: May 17, 1936"/>
+         <!-- Dividing line-->
+         <BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Margin="10,20" HeightRequest="1" Color="#263032" HorizontalOptions="FillAndExpand"/>
+         
+
+        <!--Known for-->
+        <Label Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Text="Known for"  FontSize="20" FontAttributes="Bold" TextColor="#adadad" Padding="20,0,20,20"/>
+        <StackLayout  Grid.Row="5" Grid.Column="1" Padding="0,0,20,0" Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="End">
+              <Label TextColor="#eba507" Text="SEE ALL"/>
+              <Image Source="Arrow"  /> 
+         </StackLayout>
+
+        <CollectionView Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2"
+                                HorizontalScrollBarVisibility="Never" 
+                                Margin="20,0,20,15" 
+                                ItemsSource="{Binding movie}"
+                                VerticalOptions="StartAndExpand"
+                                ItemsLayout="HorizontalList"
+                                HeightRequest="235">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout Margin="8,0">  
+                                            <PanCake:PancakeView CornerRadius="20" Margin="0,0,20,0">
+                                                 <Image Source="{Binding MoviePicture}" HeightRequest="225" WidthRequest="145" Aspect="Fill"/>
+                                            </PanCake:PancakeView>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+          </CollectionView>   
+
+    </Grid>
+</ScrollView> 
+</ContentPage>
